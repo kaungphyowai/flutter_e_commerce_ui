@@ -25,8 +25,6 @@ double getProportionateScreenHeight(double inputHeight) {
 // Get the proportionate height as per screen size
 double getProportionateScreenWidth(double inputWidth) {
   double screenWidth = SizeConfig.screenWidth;
-  print('screenWidth: ' + screenWidth.toString());
   // 375 is the layout width that designer use
-  print('The result: ' + ((inputWidth / 375.0) * screenWidth).toString());
   return (inputWidth / 375.0) * screenWidth;
 }
