@@ -1,6 +1,12 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_e_commerce_ui/screens/forget_password/forget_password.dart';
+import 'package:flutter_e_commerce_ui/screens/login_success/login_success.dart';
+import 'package:flutter_e_commerce_ui/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter_e_commerce_ui/screens/splash/splash_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
+  SignInScreen.routeName: (context) => SignInScreen(),
+  ForgotPassword.routeName: (context) => ForgotPassword(),
+  LoginSuccess.routeName: (context) => LoginSuccess(),
 };
