@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/components/default_button.dart';
 import 'package:flutter_e_commerce_ui/components/form_error.dart';
+import 'package:flutter_e_commerce_ui/screens/complete_profile/complete_profile.dart';
 import 'package:flutter_e_commerce_ui/screens/sign_in/components/custom_suffix_icon.dart';
 
 import '../../../constants.dart';
@@ -15,20 +16,20 @@ class _SignUpFormState extends State<SignUpForm> {
   String email, password, confirmedPassword;
   List<String> errors = [];
   final _formkey = GlobalKey<FormState>();
+  void addError(error) {
+    return setState(() {
+      errors.add(error);
+    });
+  }
+
+  void removeError(error) {
+    return setState(() {
+      errors.remove(error);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    void addError(error) {
-      return setState(() {
-        errors.add(error);
-      });
-    }
-
-    void removeError(error) {
-      return setState(() {
-        errors.remove(error);
-      });
-    }
-
     return Form(
       key: _formkey,
       child: Padding(
@@ -48,6 +49,7 @@ class _SignUpFormState extends State<SignUpForm> {
               press: () {
                 if (_formkey.currentState.validate()) {
                   //Go to complete profile
+                  Navigator.pushNamed(context, CompleteProfile.routeName);
                 }
               },
             )
@@ -75,6 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
         } else if (password != confirmedPassword &&
             !errors.contains(kMatchPassError)) {
           addError(kMatchPassError);
+          return "";
         }
         return null;
       },
@@ -106,8 +109,10 @@ class _SignUpFormState extends State<SignUpForm> {
       validator: (value) {
         if (value.isEmpty && !errors.contains(kPassNullError)) {
           addError(kPassNullError);
+          return '';
         } else if (value.length < 8 && !errors.contains(kShortPassError)) {
           addError(kShortPassError);
+          return '';
         }
         return null;
       },
