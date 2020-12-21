@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/components/default_button.dart';
 import 'package:flutter_e_commerce_ui/components/form_error.dart';
+import 'package:flutter_e_commerce_ui/screens/otp/otp.dart';
 import 'package:flutter_e_commerce_ui/screens/sign_in/components/custom_suffix_icon.dart';
 
 import '../../../constants.dart';
@@ -50,6 +51,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
               press: () {
                 if (_formkey.currentState.validate()) {
                   //Go to OTP screen
+                  Navigator.pushNamed(context, Otp.routeName);
                 }
               },
             )
