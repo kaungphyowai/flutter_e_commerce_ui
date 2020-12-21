@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/components/default_button.dart';
 import 'package:flutter_e_commerce_ui/components/form_error.dart';
 import 'package:flutter_e_commerce_ui/components/no_account_text.dart';
-import 'package:flutter_e_commerce_ui/screens/forget_password/forget_password.dart';
 import 'package:flutter_e_commerce_ui/screens/sign_in/components/custom_suffix_icon.dart';
 import 'package:flutter_e_commerce_ui/size_config.dart';
 

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/components/no_account_text.dart';
 import 'package:flutter_e_commerce_ui/components/social_card.dart';
-import 'package:flutter_e_commerce_ui/constants.dart';
-import 'package:flutter_e_commerce_ui/screens/forget_password/forget_password.dart';
 import 'package:flutter_e_commerce_ui/screens/sign_in/components/sign_in_form.dart';
 import 'package:flutter_e_commerce_ui/size_config.dart';
 
