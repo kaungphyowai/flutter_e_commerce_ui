@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_e_commerce_ui/components/product_card.dart';
+import 'package:flutter_e_commerce_ui/models/Product.dart';
+import 'package:flutter_e_commerce_ui/screens/home/components/popular_product.dart';
+import 'package:flutter_e_commerce_ui/screens/home/components/section_title.dart';
 import 'package:flutter_e_commerce_ui/screens/home/components/special_offer.dart';
 import 'package:flutter_e_commerce_ui/size_config.dart';
 
@@ -21,7 +25,9 @@ class Body extends StatelessWidget {
             Categories(),
             SizedBox(height: getProportionateScreenWidth(30)),
             SpecialOffer(),
-            Text("hello"),
+            SizedBox(height: getProportionateScreenWidth(30)),
+            PopularProduct(),
+            SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),
       ),
