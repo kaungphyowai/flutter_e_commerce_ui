@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_e_commerce_ui/screens/home/components/section_title.dart';
 import 'package:flutter_e_commerce_ui/size_config.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'categories.dart';
 import 'discount_banner.dart';
@@ -19,6 +19,10 @@ class Body extends StatelessWidget {
             DiscountBanner(),
             SizedBox(height: getProportionateScreenWidth(30)),
             Categories(),
+            SectionTitle(
+              text: "Special Offer",
+              press: () {},
+            )
           ],
         ),
       ),
