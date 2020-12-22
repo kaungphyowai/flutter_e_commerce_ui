@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce_ui/components/default_button.dart';
 import 'package:flutter_e_commerce_ui/constants.dart';
 import 'package:flutter_e_commerce_ui/size_config.dart';
 

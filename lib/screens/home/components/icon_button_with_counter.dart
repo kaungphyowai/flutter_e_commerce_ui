@@ -46,7 +46,7 @@ class IconBtnWithCounter extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "${numofItems}",
+                    "${numofItems.toString()}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(10),
                       height: 1,

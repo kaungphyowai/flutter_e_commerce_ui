@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/components/product_card.dart';
 import 'package:flutter_e_commerce_ui/models/Product.dart';
+import 'package:flutter_e_commerce_ui/screens/details/details.dart';
 import 'package:flutter_e_commerce_ui/screens/home/components/section_title.dart';
 
 import '../../../size_config.dart';
@@ -28,6 +29,9 @@ class PopularProduct extends StatelessWidget {
                 demoProducts.length,
                 (index) => ProductCard(
                   proudct: demoProducts[index],
+                  press: () => Navigator.pushNamed(context, Details.routeName,
+                      arguments:
+                          ProductDetailsArgument(product: demoProducts[index])),
                 ),
               ),
               SizedBox(
