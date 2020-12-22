@@ -20,7 +20,8 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenWidth(30)),
             Categories(),
             SizedBox(height: getProportionateScreenWidth(30)),
-            SpecialOffer()
+            SpecialOffer(),
+            Text("hello"),
           ],
         ),
       ),
