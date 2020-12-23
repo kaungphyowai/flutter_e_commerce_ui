@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_ui/models/Product.dart';
 import 'package:flutter_e_commerce_ui/screens/details/components/product_description.dart';
 import 'package:flutter_e_commerce_ui/screens/details/components/product_image.dart';
+import 'package:flutter_e_commerce_ui/screens/details/components/top_rounded_container.dart';
 
 class Body extends StatelessWidget {
   final Product product;
