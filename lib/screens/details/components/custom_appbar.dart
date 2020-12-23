@@ -10,12 +10,10 @@ class CustomAppBar extends PreferredSize {
   CustomAppBar({this.rating});
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(AppBar().preferredSize.height);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SafeArea(
       child: Padding(
         padding:
