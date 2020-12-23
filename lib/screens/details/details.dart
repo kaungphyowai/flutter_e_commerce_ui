@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce_ui/components/rounded_icon_btn.dart';
 import 'package:flutter_e_commerce_ui/models/Product.dart';
-import 'package:flutter_e_commerce_ui/size_config.dart';
+
+import 'components/body.dart';
+import 'components/custom_appbar.dart';
 
 class Details extends StatelessWidget {
   static String routeName = "/details";
+
   @override
   Widget build(BuildContext context) {
+    final ProductDetailsArgument argument =
+        ModalRoute.of(context).settings.arguments;
     return Scaffold(
       backgroundColor: Color(0xFFF5F6F9),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 20.0),
-          child: RoundedIconBtn(
-            icon: Icons.arrow_back,
-            press: () => Navigator.pop(context),
-          ),
-        ),
+      appBar: CustomAppBar(
+        rating: argument.product.rating,
+      ),
+      body: Body(
+        product: argument.product,
       ),
     );
   }
-}
-
-class CustomAppBar extends PreferredSize {
-  @override
-  // TODO: implement preferredSize
-  Size get preferredSize => super.preferredSize;
 }
 
 class ProductDetailsArgument {
